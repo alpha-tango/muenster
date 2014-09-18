@@ -1,6 +1,6 @@
 <h1>Jobs</h1>
 <ul>
   <% @jobs.each do |job| %>
-  <li><%= job.title %></li>
+  <li><%= "#{job.title} - #{job.company.name}, #{job.company.location}"%></li> 
   <% end %>
 </ul>
