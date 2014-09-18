@@ -1,6 +1,7 @@
 <h2><%= @job.title %></h2>
+<%= link_to "Edit this posting", edit_job_path %>
 <p>Company: <%= link_to "#{@job.company.name}", company_path(@job.company) %> </p>
 <p>Location: <%= @job.company.location %> </p>
-<p>Description: <%= @job.company.description %> </p>
+<p>Description: <%= @job.description %> </p>
 
 <%= link_to 'Back', jobs_path %>
