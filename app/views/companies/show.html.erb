@@ -1,0 +1,10 @@
+<h2><%= @company.name %></h2>
+<p>Location: <%= @company.location %></p>
+<p>Industry: <%= @company.industry %></p>
+<p>Description: <%= @company.description %></p>
+<p> Available Jobs:</p>
+ <ul>
+   <% @company_jobs.each do |job| %>
+    <li> <%= job.title %> </li>
+    <% end %>
+ </ul>
