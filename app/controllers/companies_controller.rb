@@ -9,6 +9,7 @@ class CompaniesController < ApplicationController
   end
 
   def new
+    @company = Company.new
   end
 
   def create
@@ -18,6 +19,19 @@ class CompaniesController < ApplicationController
       redirect_to @company
     else
       render 'new'
+    end
+  end
+
+  def edit
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    @company = Company.find(params[:id])
+    if @company.update(company_params)
+      redirect_to @company
+    else
+      render 'edit'
     end
   end
 
